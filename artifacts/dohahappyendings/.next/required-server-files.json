@@ -63,19 +63,8 @@
       "dangerouslyAllowSVG": false,
       "contentSecurityPolicy": "script-src 'none'; frame-src 'none'; sandbox;",
       "contentDispositionType": "attachment",
-      "remotePatterns": [
-        {
-          "protocol": "https",
-          "hostname": "images.unsplash.com",
-          "pathname": "/**"
-        },
-        {
-          "protocol": "https",
-          "hostname": "*.supabase.co",
-          "pathname": "/storage/v1/object/public/**"
-        }
-      ],
-      "unoptimized": false
+      "remotePatterns": [],
+      "unoptimized": true
     },
     "devIndicators": {
       "position": "bottom-left"
@@ -105,6 +94,7 @@
     "compiler": {},
     "expireTime": 31536000,
     "staticPageGenerationTimeout": 60,
+    "output": "export",
     "modularizeImports": {
       "@mui/icons-material": {
         "transform": "@mui/icons-material/{{member}}"

@@ -1,8 +1,7 @@
 {
-  "framework": "nextjs",
   "installCommand": "cd ../.. && pnpm install",
   "buildCommand": "cd ../.. && pnpm --filter @workspace/dohahappyendings run build",
-  "outputDirectory": ".next",
+  "outputDirectory": "out",
   "headers": [
     {
       "source": "/(.*)",
