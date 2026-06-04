@@ -46,7 +46,7 @@ export function Navbar() {
                 alt="DohaHappyEndings"
                 fill
                 sizes="96px"
-                className="object-contain drop-shadow-[0_0_12px_rgba(185,28,28,0.6)] group-hover:drop-shadow-[0_0_24px_rgba(220,38,38,0.9)] transition-all duration-500 scale-110"
+                className="object-contain drop-shadow-[0_0_14px_rgba(212,175,55,0.7)] group-hover:drop-shadow-[0_0_28px_rgba(245,197,24,1)] transition-all duration-500 scale-110"
                 priority
               />
             </div>

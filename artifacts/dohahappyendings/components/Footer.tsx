@@ -4,7 +4,7 @@ import { Mail, MapPin, Instagram, Twitter } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-gold-500/10 bg-[#060106]/90 backdrop-blur-2xl">
+    <footer className="relative border-t border-gold-500/10 bg-[#060500]/90 backdrop-blur-2xl">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/40 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -13,7 +13,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-5 group">
               <div className="relative w-14 h-14">
-                <Image src="/logo-transparent.png" alt="DohaHappyEndings" fill className="object-contain drop-shadow-[0_0_8px_rgba(201,72,106,0.5)]" />
+                <Image src="/logo-transparent.png" alt="DohaHappyEndings" fill className="object-contain drop-shadow-[0_0_10px_rgba(212,175,55,0.6)]" />
               </div>
               <div>
                 <p className="font-display text-base font-bold text-gold-gradient tracking-wide">DOHA</p>

@@ -9,63 +9,60 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // "gold" = deep crimson → ember amber (masculine)
+        // "gold" = rich yellow-gold spectrum
         gold: {
-          50:  "#fff1f1",
-          100: "#ffdfdf",
-          200: "#ffc5c5",
-          300: "#FF8080",
-          400: "#DC2626",
-          500: "#B91C1C",
-          600: "#991B1B",
-          700: "#7F1D1D",
-          800: "#5C1212",
-          900: "#3D0B0B",
-          DEFAULT: "#B91C1C",
+          50:  "#FFFDF0",
+          100: "#FFF8CC",
+          200: "#FFEE80",
+          300: "#FFE033",
+          400: "#F5C518",
+          500: "#D4AF37",
+          600: "#B8860B",
+          700: "#8B6914",
+          800: "#5C440A",
+          900: "#2E2005",
+          DEFAULT: "#D4AF37",
         },
-        // "silver" = warm ivory / parchment
+        // "silver" = cool metallic silver → platinum white
         silver: {
-          50:  "#FAF7F2",
-          100: "#F5F0E8",
-          200: "#EDE4D4",
-          300: "#D8CDB8",
-          400: "#C4B49A",
-          500: "#A89880",
-          600: "#8A7864",
-          700: "#6A5A4A",
-          800: "#4A3C30",
-          900: "#2E2418",
-          DEFAULT: "#C4B49A",
+          50:  "#FFFFFF",
+          100: "#F8F8F8",
+          200: "#EBEBEB",
+          300: "#D4D4D4",
+          400: "#B8B8B8",
+          500: "#989898",
+          600: "#747474",
+          700: "#555555",
+          800: "#333333",
+          900: "#181818",
+          DEFAULT: "#C8C8C8",
         },
-        // Obsidian = charcoal-noir
+        // Obsidian = near-black with warm golden undertone
         obsidian: {
-          DEFAULT: "#07060A",
-          50:  "#1C1820",
-          100: "#141218",
-          200: "#0E0C12",
-          300: "#07060A",
+          DEFAULT: "#080600",
+          50:  "#1E1900",
+          100: "#141000",
+          200: "#0F0C00",
+          300: "#080600",
         },
-        // Ember = amber-gold accent
+        // Ember = champagne / warm light gold accent
         ember: {
-          300: "#FCD34D",
-          400: "#FBBF24",
-          500: "#F59E0B",
-          600: "#D97706",
-          700: "#B45309",
-          DEFAULT: "#F59E0B",
+          300: "#FFE566",
+          400: "#FFD700",
+          500: "#F5C518",
+          600: "#D4AF37",
+          700: "#B8860B",
+          DEFAULT: "#F5C518",
         },
-        // Crimson = direct red shades
-        crimson: {
-          50:  "#FFF1F1",
-          100: "#FFE0E0",
-          300: "#FF6B6B",
-          400: "#EF4444",
-          500: "#DC2626",
-          600: "#B91C1C",
-          700: "#991B1B",
-          800: "#7F1D1D",
-          900: "#450A0A",
-          DEFAULT: "#DC2626",
+        // Platinum = extra-bright silver for highlights
+        platinum: {
+          50:  "#FFFFFF",
+          100: "#FAFAFA",
+          200: "#F4F4F4",
+          300: "#E8E8E8",
+          400: "#D8D8D8",
+          500: "#C0C0C0",
+          DEFAULT: "#E8E8E8",
         },
       },
       fontFamily: {
@@ -74,33 +71,35 @@ const config: Config = {
         body:    ["'Inter'", "system-ui", "sans-serif"],
       },
       backgroundImage: {
-        // Primary gradient: deep blood-red → crimson → ember-amber
-        "gold-gradient":   "linear-gradient(135deg, #7F1D1D 0%, #DC2626 55%, #F59E0B 100%)",
-        "silver-gradient": "linear-gradient(135deg, #A89880 0%, #F5F0E8 50%, #A89880 100%)",
-        // CTA buttons
-        "wine-gradient":   "linear-gradient(135deg, #450A0A 0%, #991B1B 60%, #B91C1C 100%)",
-        // Ember accent
-        "ember-gradient":  "linear-gradient(135deg, #B45309 0%, #F59E0B 50%, #FCD34D 100%)",
+        // Primary gradient: deep dark-gold → rich gold → bright champagne
+        "gold-gradient":   "linear-gradient(135deg, #7A5C00 0%, #B8860B 30%, #D4AF37 55%, #F5C518 75%, #FFE566 100%)",
+        // Silver gradient: brushed metallic look
+        "silver-gradient": "linear-gradient(135deg, #707070 0%, #C0C0C0 25%, #F5F5F5 45%, #FFFFFF 50%, #E8E8E8 60%, #B0B0B0 78%, #808080 100%)",
+        // CTA buttons: deep dark gold → polished gold
+        "wine-gradient":   "linear-gradient(135deg, #2E1F00 0%, #7A5C00 40%, #B8860B 70%, #D4AF37 100%)",
+        // Ember accent: champagne shimmer
+        "ember-gradient":  "linear-gradient(135deg, #B8860B 0%, #D4AF37 40%, #F5C518 65%, #FFE566 100%)",
         // Backgrounds
-        "dark-gradient":   "linear-gradient(180deg, #07060A 0%, #0E0C12 50%, #07060A 100%)",
-        "hero-gradient":   "radial-gradient(ellipse 85% 70% at 50% -10%, rgba(153,27,27,0.25) 0%, transparent 65%)",
-        "glow-crimson":    "radial-gradient(circle, rgba(185,28,28,0.4) 0%, transparent 70%)",
-        "veil":            "linear-gradient(180deg, transparent 0%, rgba(7,6,10,0.95) 100%)",
+        "dark-gradient":   "linear-gradient(180deg, #080600 0%, #0F0C00 50%, #080600 100%)",
+        "hero-gradient":   "radial-gradient(ellipse 85% 70% at 50% -10%, rgba(212,175,55,0.28) 0%, transparent 65%)",
+        "glow-gold":       "radial-gradient(circle, rgba(212,175,55,0.45) 0%, transparent 70%)",
+        "veil":            "linear-gradient(180deg, transparent 0%, rgba(8,6,0,0.95) 100%)",
       },
       boxShadow: {
-        "gold-glow":    "0 0 30px rgba(185,28,28,0.4), 0 0 70px rgba(127,29,29,0.2)",
-        "gold-glow-sm": "0 0 14px rgba(220,38,38,0.5), 0 2px 20px rgba(127,29,29,0.25)",
-        "ember-glow":   "0 0 25px rgba(245,158,11,0.4), 0 0 50px rgba(180,83,9,0.2)",
-        "glass":        "0 4px 30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.05)",
-        "glass-lg":     "0 8px 60px rgba(0,0,0,0.75), inset 0 1px 0 rgba(255,255,255,0.04)",
+        "gold-glow":    "0 0 30px rgba(212,175,55,0.55), 0 0 80px rgba(184,134,11,0.3), 0 0 120px rgba(122,92,0,0.15)",
+        "gold-glow-sm": "0 0 14px rgba(245,197,24,0.6),  0 2px 24px rgba(184,134,11,0.35)",
+        "silver-glow":  "0 0 25px rgba(220,220,220,0.5), 0 0 60px rgba(192,192,192,0.25)",
+        "glass":        "0 4px 30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.06)",
+        "glass-lg":     "0 8px 60px rgba(0,0,0,0.75), inset 0 1px 0 rgba(255,255,255,0.05)",
       },
       backdropBlur: { xs: "2px" },
       animation: {
-        "shimmer":     "shimmer 2.5s linear infinite",
-        "float":       "float 7s ease-in-out infinite",
-        "breathe":     "breathe 4s ease-in-out infinite",
-        "pulse-red":   "pulseRed 3s ease-in-out infinite",
-        "border-flow": "borderFlow 4s linear infinite",
+        "shimmer":      "shimmer 2.5s linear infinite",
+        "float":        "float 7s ease-in-out infinite",
+        "breathe":      "breathe 4s ease-in-out infinite",
+        "pulse-gold":   "pulseGold 3s ease-in-out infinite",
+        "border-flow":  "borderFlow 4s linear infinite",
+        "silver-sheen": "silverSheen 3s ease-in-out infinite",
       },
       keyframes: {
         shimmer: {
@@ -116,14 +115,18 @@ const config: Config = {
           "0%, 100%": { opacity: "0.65", transform: "scale(1)" },
           "50%":      { opacity: "1",    transform: "scale(1.08)" },
         },
-        pulseRed: {
-          "0%, 100%": { boxShadow: "0 0 20px rgba(185,28,28,0.2)" },
-          "50%":      { boxShadow: "0 0 55px rgba(220,38,38,0.6)" },
+        pulseGold: {
+          "0%, 100%": { boxShadow: "0 0 20px rgba(212,175,55,0.25), 0 0 40px rgba(184,134,11,0.1)" },
+          "50%":      { boxShadow: "0 0 55px rgba(245,197,24,0.7),  0 0 90px rgba(212,175,55,0.35)" },
         },
         borderFlow: {
           "0%":   { backgroundPosition: "0% 50%" },
           "50%":  { backgroundPosition: "100% 50%" },
           "100%": { backgroundPosition: "0% 50%" },
+        },
+        silverSheen: {
+          "0%, 100%": { backgroundPosition: "-200% center" },
+          "50%":      { backgroundPosition:  "200% center" },
         },
       },
     },

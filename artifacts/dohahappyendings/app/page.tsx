@@ -52,19 +52,19 @@ export default function HomePage() {
       <section ref={heroRef} className="relative min-h-screen flex flex-col items-center justify-center pt-28 pb-24 px-4 overflow-hidden">
 
         {/* Atmospheric background layers */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_90%_70%_at_50%_-5%,rgba(168,41,78,0.2)_0%,transparent_65%)] pointer-events-none" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_40%_at_80%_80%,rgba(107,21,48,0.12)_0%,transparent_60%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_90%_70%_at_50%_-5%,rgba(212,175,55,0.22)_0%,transparent_65%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_40%_at_80%_80%,rgba(184,134,11,0.1)_0%,transparent_60%)] pointer-events-none" />
 
         {/* Floating orbs */}
         <motion.div
           className="absolute w-[700px] h-[700px] rounded-full pointer-events-none -top-60 -left-60"
-          style={{ background: "radial-gradient(circle, rgba(168,41,78,0.07) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(212,175,55,0.09) 0%, transparent 70%)" }}
           animate={{ scale: [1, 1.15, 1], rotate: [0, 10, 0] }}
           transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
           className="absolute w-[500px] h-[500px] rounded-full pointer-events-none -bottom-40 -right-40"
-          style={{ background: "radial-gradient(circle, rgba(201,131,106,0.06) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(245,197,24,0.06) 0%, transparent 70%)" }}
           animate={{ scale: [1, 1.2, 1] }}
           transition={{ duration: 11, repeat: Infinity, ease: "easeInOut", delay: 3 }}
         />
@@ -241,7 +241,7 @@ export default function HomePage() {
 
       {/* ═══════════════ FEATURES ═══════════════ */}
       <section className="py-24 px-4 relative">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_50%,rgba(168,41,78,0.07)_0%,transparent_70%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_50%,rgba(212,175,55,0.08)_0%,transparent_70%)] pointer-events-none" />
         <div className="max-w-7xl mx-auto relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -271,7 +271,7 @@ export default function HomePage() {
 
       {/* ═══════════════ HOW IT WORKS ═══════════════ */}
       <section className="py-24 px-4 relative">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_50%,rgba(107,21,48,0.1)_0%,transparent_70%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_50%,rgba(184,134,11,0.09)_0%,transparent_70%)] pointer-events-none" />
         <div className="max-w-5xl mx-auto relative">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
             <p className="font-body text-gold-500 text-xs uppercase tracking-[0.3em] font-medium mb-3">Simple Process</p>
@@ -297,7 +297,7 @@ export default function HomePage() {
                 <div className="relative inline-block mb-7">
                   <motion.div
                     className="w-20 h-20 rounded-full gold-border-animated flex items-center justify-center mx-auto"
-                    animate={{ boxShadow: ["0 0 0px rgba(201,72,106,0)", "0 0 30px rgba(201,72,106,0.35)", "0 0 0px rgba(201,72,106,0)"] }}
+                    animate={{ boxShadow: ["0 0 0px rgba(212,175,55,0)", "0 0 35px rgba(245,197,24,0.5)", "0 0 0px rgba(212,175,55,0)"] }}
                     transition={{ duration: 3, repeat: Infinity, delay: i * 0.8 }}
                   >
                     <span className="font-display text-2xl font-bold text-gold-gradient">{step.num}</span>
@@ -359,7 +359,7 @@ export default function HomePage() {
             {/* Background gradient pulse */}
             <motion.div
               className="absolute inset-0 rounded-3xl pointer-events-none"
-              style={{ background: "radial-gradient(ellipse 80% 60% at 50% 50%, rgba(168,41,78,0.1) 0%, transparent 70%)" }}
+              style={{ background: "radial-gradient(ellipse 80% 60% at 50% 50%, rgba(212,175,55,0.12) 0%, transparent 70%)" }}
               animate={{ opacity: [0.5, 1, 0.5] }}
               transition={{ duration: 4, repeat: Infinity }}
             />
@@ -369,7 +369,7 @@ export default function HomePage() {
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                 className="inline-block mb-6"
               >
-                <Crown className="w-14 h-14 text-gold-400 mx-auto drop-shadow-[0_0_12px_rgba(201,72,106,0.6)]" />
+                <Crown className="w-14 h-14 text-gold-400 mx-auto drop-shadow-[0_0_16px_rgba(245,197,24,0.8)]" />
               </motion.div>
               <h2 className="font-display text-4xl sm:text-5xl font-bold text-silver-100 mb-5 italic">
                 Your Next Chapter Awaits
