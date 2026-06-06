@@ -49,22 +49,22 @@ export default function HomePage() {
     <div className="relative overflow-hidden">
 
       {/* ═══════════════ HERO ═══════════════ */}
-      <section ref={heroRef} className="relative min-h-screen flex flex-col items-center justify-center pt-28 pb-24 px-4 overflow-hidden">
+      <section ref={heroRef} className="relative min-h-screen flex flex-col items-center justify-center pt-44 pb-24 px-4 overflow-hidden">
 
         {/* Atmospheric background layers */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_90%_70%_at_50%_-5%,rgba(212,175,55,0.22)_0%,transparent_65%)] pointer-events-none" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_40%_at_80%_80%,rgba(184,134,11,0.1)_0%,transparent_60%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_90%_70%_at_50%_-5%,rgba(255,215,0,0.2)_0%,transparent_65%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_40%_at_80%_80%,rgba(212,175,55,0.08)_0%,transparent_60%)] pointer-events-none" />
 
         {/* Floating orbs */}
         <motion.div
           className="absolute w-[700px] h-[700px] rounded-full pointer-events-none -top-60 -left-60"
-          style={{ background: "radial-gradient(circle, rgba(212,175,55,0.09) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(255,215,0,0.1) 0%, transparent 70%)" }}
           animate={{ scale: [1, 1.15, 1], rotate: [0, 10, 0] }}
           transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
           className="absolute w-[500px] h-[500px] rounded-full pointer-events-none -bottom-40 -right-40"
-          style={{ background: "radial-gradient(circle, rgba(245,197,24,0.06) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(255,215,0,0.07) 0%, transparent 70%)" }}
           animate={{ scale: [1, 1.2, 1] }}
           transition={{ duration: 11, repeat: Infinity, ease: "easeInOut", delay: 3 }}
         />
@@ -89,7 +89,7 @@ export default function HomePage() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="mb-8 flex items-center gap-2 glass px-5 py-2.5 rounded-full border-gold-glow"
+            className="mb-8 flex items-center gap-2 glass px-5 py-2.5 rounded-full border-gold-glow shadow-gold-glow-xs"
           >
             <Sparkles className="w-3.5 h-3.5 text-gold-400" />
             <span className="font-body text-[11px] font-medium text-silver-300 tracking-[0.3em] uppercase">
@@ -99,28 +99,22 @@ export default function HomePage() {
 
           {/* Headline */}
           <motion.h1
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display text-center text-5xl sm:text-7xl md:text-8xl lg:text-[6rem] font-bold leading-[1.04] max-w-5xl mb-7"
+            transition={{ duration: 0.75, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+            className="font-display text-center text-5xl sm:text-7xl md:text-8xl lg:text-[6.5rem] font-black leading-[1.04] max-w-5xl mb-7 tracking-tight text-white"
           >
             Where{" "}
-            <motion.span
-              className="text-gold-gradient italic"
-              animate={{ opacity: [0.85, 1, 0.85] }}
-              transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-            >
-              Desire
-            </motion.span>
+            <span className="text-gold-gradient italic">Desire</span>
             <br />
-            Meets{" "}
+            <span className="text-white">Meets </span>
             <span className="text-silver-gradient">Discretion</span>
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.35 }}
+            transition={{ duration: 0.7, delay: 0.25 }}
             className="font-body text-silver-400 text-lg sm:text-xl max-w-xl mb-12 leading-relaxed"
           >
             Doha&apos;s premier luxury connection platform. Verified profiles, encrypted conversations,
@@ -136,7 +130,7 @@ export default function HomePage() {
           >
             <Link
               href="/signup/giver"
-              className="group relative overflow-hidden flex items-center gap-2 bg-wine-gradient text-white font-body font-semibold text-base px-9 py-4 rounded-full hover:scale-105 active:scale-95 transition-transform shadow-gold-glow-sm"
+              className="group relative overflow-hidden flex items-center gap-2 btn-gold text-black font-body font-bold text-base px-9 py-4 rounded-full"
             >
               <Crown className="w-4 h-4" />
               Join as Pleasure Giver
@@ -144,7 +138,7 @@ export default function HomePage() {
             </Link>
             <Link
               href="/browse"
-              className="flex items-center gap-2 glass border-gold-glow text-silver-200 font-body font-semibold text-base px-9 py-4 rounded-full hover:text-gold-300 hover:border-gold-400/50 transition-all"
+              className="flex items-center gap-2 glass border-gold-glow text-white font-body font-bold text-base px-9 py-4 rounded-full hover:text-gold-400 hover:shadow-gold-glow-xs transition-all"
             >
               Explore Profiles
               <ChevronRight className="w-5 h-5" />
@@ -220,7 +214,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-wine-gradient opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gold-gradient opacity-0 group-hover:opacity-15 transition-opacity duration-500" />
                 </div>
               </motion.div>
             ))}
@@ -310,7 +304,7 @@ export default function HomePage() {
           </div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.5 }} className="text-center mt-14">
-            <Link href="/signup" className="inline-flex items-center gap-2 bg-wine-gradient text-white font-body font-semibold px-10 py-4 rounded-full hover:scale-105 transition-transform shadow-gold-glow-sm">
+            <Link href="/signup" className="inline-flex items-center gap-2 btn-gold text-black font-body font-bold px-10 py-4 rounded-full">
               Begin Your Journey <ChevronRight className="w-5 h-5" />
             </Link>
           </motion.div>
@@ -379,11 +373,11 @@ export default function HomePage() {
                 connection experience. Discreet. Verified. Extraordinary.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/signup/giver" className="group relative overflow-hidden flex items-center justify-center gap-2 bg-wine-gradient text-white font-body font-semibold px-9 py-4 rounded-full hover:scale-105 active:scale-95 transition-transform shadow-gold-glow">
+                <Link href="/signup/giver" className="group relative overflow-hidden flex items-center justify-center gap-2 btn-gold text-black font-body font-bold px-9 py-4 rounded-full">
                   <Crown className="w-4 h-4" /> I&apos;m a Pleasure Giver
                   <div className="absolute inset-0 shimmer opacity-0 group-hover:opacity-100 transition-opacity" />
                 </Link>
-                <Link href="/signup/client" className="flex items-center justify-center gap-2 glass border-gold-glow text-silver-200 font-body font-semibold px-9 py-4 rounded-full hover:text-gold-300 transition-all">
+                <Link href="/signup/client" className="flex items-center justify-center gap-2 glass border-gold-glow text-white font-body font-bold px-9 py-4 rounded-full hover:text-gold-400 hover:shadow-gold-glow-xs transition-all">
                   I&apos;m a Client <ChevronRight className="w-4 h-4" />
                 </Link>
               </div>

@@ -6,7 +6,7 @@ import { Shield, ChevronRight } from "lucide-react";
 
 export default function AgePolicyPage() {
   return (
-    <div className="min-h-screen pt-28 pb-20 px-4 flex items-center justify-center relative overflow-hidden">
+    <div className="min-h-screen pt-40 pb-20 px-4 flex items-center justify-center relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_30%,rgba(153,27,27,0.12)_0%,transparent_65%)] pointer-events-none" />
       <div className="max-w-xl w-full">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="liquid-glass rounded-3xl p-10 text-center">
@@ -25,7 +25,7 @@ export default function AgePolicyPage() {
           <p className="font-body text-silver-600 text-sm mb-8">
             We employ age verification technology and cooperate fully with law enforcement to prevent underage access.
           </p>
-          <Link href="/" className="inline-flex items-center gap-2 bg-wine-gradient text-white font-body font-semibold px-8 py-3.5 rounded-full hover:scale-105 transition-transform shadow-gold-glow-sm">
+          <Link href="/" className="inline-flex items-center gap-2 btn-gold text-black font-body font-bold px-8 py-3.5 rounded-full hover:scale-105 transition-transform">
             I confirm I am 18+ <ChevronRight className="w-4 h-4" />
           </Link>
         </motion.div>

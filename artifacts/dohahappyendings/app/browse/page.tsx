@@ -66,7 +66,7 @@ export default function BrowsePage() {
   }
 
   return (
-    <div className="min-h-screen pt-28 pb-20 px-4">
+    <div className="min-h-screen pt-40 pb-20 px-4">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
@@ -149,7 +149,7 @@ export default function BrowsePage() {
 
                 {/* Premium lock overlay */}
                 {profile.premium && (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#080208]/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <Lock className="w-8 h-8 text-gold-400 mb-2 drop-shadow-[0_0_8px_rgba(201,72,106,0.8)]" />
                     <span className="font-body text-xs text-gold-300 tracking-widest uppercase">Premium Content</span>
                   </div>

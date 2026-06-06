@@ -25,8 +25,8 @@ const clientSteps = [
 
 export default function HowItWorksPage() {
   return (
-    <div className="min-h-screen pt-28 pb-20 px-4 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_40%_at_50%_-5%,rgba(212,175,55,0.08)_0%,transparent_60%)] pointer-events-none" />
+    <div className="min-h-screen pt-40 pb-20 px-4 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_40%_at_50%_-5%,rgba(255,215,0,0.1)_0%,transparent_60%)] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto">
         {/* Header */}
@@ -93,7 +93,7 @@ export default function HowItWorksPage() {
             >
               <Link
                 href="/signup/giver"
-                className="inline-flex items-center gap-2 bg-gold-gradient text-obsidian font-semibold px-8 py-3.5 rounded-full hover:scale-105 transition-transform"
+                className="inline-flex items-center gap-2 btn-gold text-black font-semibold px-8 py-3.5 rounded-full hover:scale-105 transition-transform"
               >
                 <Crown className="w-4 h-4" /> Join as Pleasure Giver <ChevronRight className="w-4 h-4" />
               </Link>

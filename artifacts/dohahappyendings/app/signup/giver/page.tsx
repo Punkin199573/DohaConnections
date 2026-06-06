@@ -73,7 +73,7 @@ export default function GiverSignupPage() {
           </div>
           <h2 className="font-display text-3xl font-bold text-silver-100 mb-3">Welcome to the Elite</h2>
           <p className="text-silver-400 mb-8">Check your email to verify your account and complete your profile.</p>
-          <Link href="/login" className="bg-gold-gradient text-obsidian font-semibold px-8 py-3 rounded-full inline-block hover:scale-105 transition-transform">
+          <Link href="/login" className="btn-gold text-black font-semibold px-8 py-3 rounded-full inline-block hover:scale-105 transition-transform">
             Sign In
           </Link>
         </motion.div>
@@ -260,7 +260,7 @@ export default function GiverSignupPage() {
             {step < steps.length - 1 ? (
               <button
                 onClick={() => setStep(step + 1)}
-                className="flex-1 flex items-center justify-center gap-2 bg-gold-gradient text-obsidian px-6 py-3 rounded-full text-sm font-semibold hover:scale-[1.02] active:scale-[0.98] transition-transform"
+                className="flex-1 flex items-center justify-center gap-2 btn-gold text-black px-6 py-3 rounded-full text-sm font-semibold hover:scale-[1.02] active:scale-[0.98] transition-transform"
               >
                 Continue <ChevronRight className="w-4 h-4" />
               </button>
@@ -268,7 +268,7 @@ export default function GiverSignupPage() {
               <button
                 onClick={handleSubmit}
                 disabled={loading}
-                className="flex-1 flex items-center justify-center gap-2 bg-gold-gradient text-obsidian px-6 py-3 rounded-full text-sm font-semibold hover:scale-[1.02] active:scale-[0.98] transition-transform disabled:opacity-60 disabled:cursor-not-allowed"
+                className="flex-1 flex items-center justify-center gap-2 btn-gold text-black px-6 py-3 rounded-full text-sm font-semibold hover:scale-[1.02] active:scale-[0.98] transition-transform disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {loading ? "Creating Account..." : "Complete Signup"}
               </button>

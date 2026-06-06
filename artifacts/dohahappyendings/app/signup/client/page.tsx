@@ -69,7 +69,7 @@ export default function ClientSignupPage() {
           </div>
           <h2 className="font-display text-3xl font-bold text-silver-100 mb-3">Welcome</h2>
           <p className="text-silver-400 mb-8">Check your email to verify your account and start browsing.</p>
-          <Link href="/browse" className="bg-gold-gradient text-obsidian font-semibold px-8 py-3 rounded-full inline-block hover:scale-105 transition-transform">
+          <Link href="/browse" className="btn-gold text-black font-semibold px-8 py-3 rounded-full inline-block hover:scale-105 transition-transform">
             Browse Profiles
           </Link>
         </motion.div>
@@ -182,7 +182,7 @@ export default function ClientSignupPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full flex items-center justify-center gap-2 bg-gold-gradient text-obsidian px-6 py-3.5 rounded-full font-semibold hover:scale-[1.02] active:scale-[0.98] transition-transform disabled:opacity-60 disabled:cursor-not-allowed mt-2"
+              className="w-full flex items-center justify-center gap-2 btn-gold text-black px-6 py-3.5 rounded-full font-semibold hover:scale-[1.02] active:scale-[0.98] transition-transform disabled:opacity-60 disabled:cursor-not-allowed mt-2"
             >
               {loading ? "Creating Account..." : (
                 <>Create Client Account <ChevronRight className="w-4 h-4" /></>

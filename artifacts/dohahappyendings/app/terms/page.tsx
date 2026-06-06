@@ -15,7 +15,7 @@ const terms = [
 
 export default function TermsPage() {
   return (
-    <div className="min-h-screen pt-28 pb-20 px-4 relative overflow-hidden">
+    <div className="min-h-screen pt-40 pb-20 px-4 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_40%_at_50%_-5%,rgba(153,27,27,0.12)_0%,transparent_60%)] pointer-events-none" />
       <div className="max-w-3xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="mb-14">

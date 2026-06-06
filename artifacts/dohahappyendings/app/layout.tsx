@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="min-h-screen antialiased" style={{ background: "#080208", color: "#F0E4DC" }}>
+      <body className="min-h-screen antialiased">
         <Navbar />
         <main>{children}</main>
         <Footer />

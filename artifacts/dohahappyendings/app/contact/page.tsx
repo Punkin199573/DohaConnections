@@ -33,8 +33,8 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen pt-28 pb-20 px-4 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_40%_at_50%_-5%,rgba(212,175,55,0.08)_0%,transparent_60%)] pointer-events-none" />
+    <div className="min-h-screen pt-40 pb-20 px-4 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_40%_at_50%_-5%,rgba(255,215,0,0.1)_0%,transparent_60%)] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto">
         {/* Header */}
@@ -103,7 +103,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full flex items-center justify-center gap-2 bg-gold-gradient text-obsidian px-6 py-3.5 rounded-full font-semibold hover:scale-[1.02] active:scale-[0.98] transition-transform disabled:opacity-60"
+                    className="w-full flex items-center justify-center gap-2 btn-gold text-black px-6 py-3.5 rounded-full font-semibold hover:scale-[1.02] active:scale-[0.98] transition-transform disabled:opacity-60"
                   >
                     {loading ? "Sending..." : (
                       <>Send Message <ChevronRight className="w-4 h-4" /></>

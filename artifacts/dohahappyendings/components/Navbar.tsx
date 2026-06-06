@@ -26,48 +26,48 @@ export function Navbar() {
 
   return (
     <motion.header
-      initial={{ y: -80, opacity: 0 }}
+      initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "liquid-glass py-2 shadow-[0_8px_40px_rgba(0,0,0,0.8)]"
-          : "py-3 bg-transparent"
+          ? "liquid-glass py-1 shadow-[0_8px_50px_rgba(0,0,0,0.9)]"
+          : "py-2 bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
 
-          {/* ── Logo (BIG) ── */}
-          <Link href="/" className="flex items-center gap-4 group flex-shrink-0">
-            <div className="relative w-20 h-20 sm:w-24 sm:h-24 overflow-visible">
+          {/* ── Logo ── BIG on every screen ── */}
+          <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
+            <div className="relative w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 overflow-visible">
               <Image
                 src="/logo-transparent.png"
                 alt="DohaHappyEndings"
                 fill
-                sizes="96px"
-                className="object-contain drop-shadow-[0_0_14px_rgba(212,175,55,0.7)] group-hover:drop-shadow-[0_0_28px_rgba(245,197,24,1)] transition-all duration-500 scale-110"
+                sizes="(max-width: 640px) 112px, (max-width: 768px) 128px, 144px"
+                className="object-contain drop-shadow-[0_0_18px_rgba(255,215,0,0.75)] group-hover:drop-shadow-[0_0_35px_rgba(255,215,0,1)] transition-all duration-500 scale-110"
                 priority
               />
             </div>
             <div className="hidden sm:block">
-              <p className="font-display text-lg font-bold leading-none text-gold-gradient tracking-widest">DOHA</p>
-              <p className="font-body text-[10px] tracking-[0.4em] text-silver-500 uppercase mt-1">Happy Endings</p>
+              <p className="font-display text-xl font-black leading-none text-gold-gradient tracking-[0.3em]">DOHA</p>
+              <p className="font-body text-[9px] tracking-[0.5em] text-silver-500 uppercase mt-1 font-medium">Happy Endings</p>
             </div>
           </Link>
 
           {/* ── Desktop nav ── */}
-          <nav className="hidden md:flex items-center gap-7">
+          <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative font-body text-sm font-medium tracking-wide transition-colors duration-300 group
+                className={`relative font-body text-sm font-semibold tracking-wide transition-colors duration-300 group
                   ${link.label === "Premium"
-                    ? "text-ember-500 hover:text-ember-400"
-                    : "text-silver-400 hover:text-silver-100"}`}
+                    ? "text-gold-400 hover:text-gold-300"
+                    : "text-silver-400 hover:text-white"}`}
               >
-                {link.label === "Premium" && <Crown className="inline w-3 h-3 mr-1 mb-0.5 text-ember-500" />}
+                {link.label === "Premium" && <Crown className="inline w-3 h-3 mr-1 mb-0.5 text-gold-400" />}
                 {link.label}
                 <span className={`absolute -bottom-1 left-0 w-0 h-px group-hover:w-full transition-all duration-300
                   ${link.label === "Premium" ? "bg-ember-gradient" : "bg-gold-gradient"}`} />
@@ -77,25 +77,25 @@ export function Navbar() {
 
           {/* ── Desktop CTAs ── */}
           <div className="hidden md:flex items-center gap-3">
-            <Link href="/login" className="font-body text-sm font-medium text-silver-400 hover:text-silver-100 transition-colors px-4 py-2 tracking-wide">
+            <Link href="/login" className="font-body text-sm font-semibold text-silver-400 hover:text-white transition-colors px-4 py-2 tracking-wide">
               Sign In
             </Link>
             <Link
               href="/signup"
-              className="relative group overflow-hidden font-body text-sm font-semibold text-white px-6 py-2.5 rounded-full bg-wine-gradient hover:scale-105 active:scale-95 transition-all shadow-gold-glow-sm"
+              className="relative group overflow-hidden font-body text-sm font-bold text-black px-7 py-2.5 rounded-full btn-gold tracking-wide"
             >
-              <span className="relative z-10 tracking-wide">Join Now</span>
+              <span className="relative z-10">Join Now</span>
               <div className="absolute inset-0 shimmer opacity-0 group-hover:opacity-100 transition-opacity" />
             </Link>
           </div>
 
           {/* ── Mobile toggle ── */}
           <button
-            className="md:hidden text-silver-300 hover:text-gold-400 transition-colors"
+            className="md:hidden text-silver-300 hover:text-gold-400 transition-colors p-2"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
-            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
           </button>
         </div>
       </div>
@@ -116,17 +116,17 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="font-body text-silver-300 hover:text-silver-100 transition-colors font-medium py-2 border-b border-white/5 last:border-0 tracking-wide"
+                  className="font-body text-silver-200 hover:text-white transition-colors font-semibold py-2.5 border-b border-white/5 last:border-0 tracking-wide text-base"
                 >
-                  {link.label === "Premium" && <Crown className="inline w-3 h-3 mr-1.5 text-ember-500" />}
+                  {link.label === "Premium" && <Crown className="inline w-3.5 h-3.5 mr-2 text-gold-400" />}
                   {link.label}
                 </Link>
               ))}
               <div className="flex flex-col gap-3 pt-2">
-                <Link href="/login" onClick={() => setMobileOpen(false)} className="text-center font-body text-silver-300 border border-gold-600/30 rounded-full py-2.5 font-medium hover:border-gold-500/60 transition-colors">
+                <Link href="/login" onClick={() => setMobileOpen(false)} className="text-center font-body text-silver-200 border border-gold-500/40 rounded-full py-3 font-semibold hover:border-gold-400 transition-colors text-base">
                   Sign In
                 </Link>
-                <Link href="/signup" onClick={() => setMobileOpen(false)} className="text-center font-body text-white bg-wine-gradient rounded-full py-2.5 font-semibold shadow-gold-glow-sm">
+                <Link href="/signup" onClick={() => setMobileOpen(false)} className="text-center font-body text-black btn-gold rounded-full py-3 font-bold text-base">
                   Join Now
                 </Link>
               </div>

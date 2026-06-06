@@ -15,8 +15,8 @@ const values = [
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen pt-28 pb-20 px-4 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(212,175,55,0.1)_0%,transparent_60%)] pointer-events-none" />
+    <div className="min-h-screen pt-40 pb-20 px-4 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(255,215,0,0.12)_0%,transparent_60%)] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto relative">
         {/* Hero */}

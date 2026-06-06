@@ -128,7 +128,7 @@ export default function PremiumPage() {
             onClick={() => setUnlockModal(true)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
-            className="relative group overflow-hidden inline-flex items-center gap-3 bg-wine-gradient text-white font-body font-semibold text-lg px-12 py-5 rounded-full shadow-gold-glow"
+            className="relative group overflow-hidden inline-flex items-center gap-3 btn-gold text-black font-body font-bold text-lg px-12 py-5 rounded-full"
           >
             <Lock className="w-5 h-5" />
             Unlock Premium Now
@@ -175,7 +175,7 @@ export default function PremiumPage() {
                     className="object-cover locked-blur group-hover:blur-[8px] transition-all duration-300"
                   />
                   {/* Dark overlay */}
-                  <div className="absolute inset-0 bg-[#080208]/60 backdrop-blur-[1px]" />
+                  <div className="absolute inset-0 bg-black/60 backdrop-blur-[1px]" />
 
                   {/* Lock icon */}
                   <div className="absolute inset-0 flex flex-col items-center justify-center">
@@ -248,7 +248,7 @@ export default function PremiumPage() {
                 {/* Popular badge */}
                 {tier.popular && (
                   <div className="absolute top-0 left-0 right-0 flex justify-center">
-                    <div className="bg-wine-gradient text-white font-body text-xs font-semibold px-5 py-1.5 rounded-b-xl tracking-widest uppercase">
+                    <div className="btn-gold text-black font-body text-xs font-semibold px-5 py-1.5 rounded-b-xl tracking-widest uppercase">
                       Most Popular
                     </div>
                   </div>
@@ -294,7 +294,7 @@ export default function PremiumPage() {
 
                   <button className={`w-full py-3.5 rounded-full font-body font-semibold text-sm transition-all hover:scale-[1.03] active:scale-[0.98]
                     ${tier.popular
-                      ? "bg-wine-gradient text-white shadow-gold-glow-sm"
+                      ? "bg-wine-gradient text-white-sm"
                       : "glass border-gold-glow text-silver-200 hover:text-gold-300"}`}
                   >
                     {tier.cta}
@@ -348,7 +348,7 @@ export default function PremiumPage() {
             className="fixed inset-0 z-50 flex items-center justify-center px-4"
             onClick={() => setUnlockModal(false)}
           >
-            <div className="absolute inset-0 bg-[#080208]/80 backdrop-blur-xl" />
+            <div className="absolute inset-0 bg-black/80 backdrop-blur-xl" />
             <motion.div
               initial={{ scale: 0.85, opacity: 0, y: 40 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
@@ -376,7 +376,7 @@ export default function PremiumPage() {
                 <Link
                   href="/signup"
                   onClick={() => setUnlockModal(false)}
-                  className="w-full flex items-center justify-center gap-2 bg-wine-gradient text-white font-body font-semibold py-4 rounded-full hover:scale-[1.03] transition-transform shadow-gold-glow-sm"
+                  className="w-full flex items-center justify-center gap-2 btn-gold text-black font-body font-bold py-4 rounded-full hover:scale-[1.03] transition-transform-sm"
                 >
                   <Star className="w-4 h-4" /> Create Premium Account
                 </Link>
